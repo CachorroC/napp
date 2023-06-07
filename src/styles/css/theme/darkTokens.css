@@ -1,0 +1,228 @@
+:root {
+  --sf-1: rgba(154, 181, 233, 0.1);
+  --sf-2: rgba(154, 181, 233, 0.2);
+  --sf-3: rgba(154, 181, 233, 0.3);
+  --sf-4: rgba(154, 181, 233, 0.4);
+  --sf-5: rgba(154, 181, 233, 0.5);
+  --md-source: rgb(154, 181, 233);
+  /* primary */
+  --pal-primary0: #000000;
+  --pal-primary10: #001b3e;
+  --pal-primary20: #002f65;
+  --pal-primary25: #003a79;
+  --pal-primary30: #00458e;
+  --pal-primary35: #19519a;
+  --pal-primary40: #2b5ea7;
+  --pal-primary50: #4877c2;
+  --pal-primary60: #6391de;
+  --pal-primary70: #7eacfb;
+  --pal-primary80: #aac7ff;
+  --pal-primary90: #d6e3ff;
+  --pal-primary95: #ecf0ff;
+  --pal-primary98: #f9f9ff;
+  --pal-primary99: #fdfbff;
+  --pal-primary100: #ffffff;
+  /* secondary */
+  --pal-secondary0: #000000;
+  --pal-secondary10: #131c2b;
+  --pal-secondary20: #283141;
+  --pal-secondary25: #333c4d;
+  --pal-secondary30: #3e4759;
+  --pal-secondary35: #4a5365;
+  --pal-secondary40: #565e71;
+  --pal-secondary50: #6e778b;
+  --pal-secondary60: #8891a5;
+  --pal-secondary70: #a2abc0;
+  --pal-secondary80: #bec6dc;
+  --pal-secondary90: #dae2f9;
+  --pal-secondary95: #ecf0ff;
+  --pal-secondary98: #f9f9ff;
+  --pal-secondary99: #fdfbff;
+  --pal-secondary100: #ffffff;
+  /* tertiary */
+  --pal-tertiary0: #000000;
+  --pal-tertiary10: #28132e;
+  --pal-tertiary20: #3f2844;
+  --pal-tertiary25: #4b3350;
+  --pal-tertiary30: #573e5c;
+  --pal-tertiary35: #634a68;
+  --pal-tertiary40: #705575;
+  --pal-tertiary50: #8a6e8e;
+  --pal-tertiary60: #a487a9;
+  --pal-tertiary70: #c0a1c4;
+  --pal-tertiary80: #ddbce0;
+  --pal-tertiary90: #fad8fd;
+  --pal-tertiary95: #ffebfe;
+  --pal-tertiary98: #fff7fb;
+  --pal-tertiary99: #fffbff;
+  --pal-tertiary100: #ffffff;
+  /* neutral */
+  --pal-neutral0: #000000;
+  --pal-neutral10: #1a1b1e;
+  --pal-neutral20: #2f3033;
+  --pal-neutral25: #3a3b3f;
+  --pal-neutral30: #46474a;
+  --pal-neutral35: #525256;
+  --pal-neutral40: #5e5e62;
+  --pal-neutral50: #77777a;
+  --pal-neutral60: #909094;
+  --pal-neutral70: #ababaf;
+  --pal-neutral80: #c7c6ca;
+  --pal-neutral90: #e3e2e6;
+  --pal-neutral95: #f1f0f4;
+  --pal-neutral98: #faf9fd;
+  --pal-neutral99: #fdfbff;
+  --pal-neutral100: #ffffff;
+  /* neutral-variant */
+  --pal-neutral-variant0: #000000;
+  --pal-neutral-variant10: #181c22;
+  --pal-neutral-variant20: #2d3038;
+  --pal-neutral-variant25: #383b43;
+  --pal-neutral-variant30: #44474e;
+  --pal-neutral-variant35: #4f525a;
+  --pal-neutral-variant40: #5b5e66;
+  --pal-neutral-variant50: #74777f;
+  --pal-neutral-variant60: #8e9099;
+  --pal-neutral-variant70: #a9abb4;
+  --pal-neutral-variant80: #c4c6d0;
+  --pal-neutral-variant90: #e0e2ec;
+  --pal-neutral-variant95: #eff0fa;
+  --pal-neutral-variant98: #f9f9ff;
+  --pal-neutral-variant99: #fdfbff;
+  --pal-neutral-variant100: #ffffff;
+  /* error */
+  --pal-error0: #000000;
+  --pal-error10: #410002;
+  --pal-error20: #690005;
+  --pal-error25: #7e0007;
+  --pal-error30: #93000a;
+  --pal-error35: #a80710;
+  --pal-error40: #ba1a1a;
+  --pal-error50: #de3730;
+  --pal-error60: #ff5449;
+  --pal-error70: #ff897d;
+  --pal-error80: #ffb4ab;
+  --pal-error90: #ffdad6;
+  --pal-error95: #ffedea;
+  --pal-error98: #fff8f7;
+  --pal-error99: #fffbff;
+  --pal-error100: #ffffff;
+  /* light */
+  /* --primary: var(--pal-primary40);
+  --on-primary: var(--pal-primary100);
+  --primary-container: var(--pal-primary90);
+  --on-primary-container: var(--pal-primary10);
+  --secondary: var(--pal-secondary40);
+  --on-secondary: var(--pal-tertiary100);
+  --secondary-container: var(--pal-secondary90);
+  --on-secondary-container: var(--pal-secondary10);
+  --tertiary: var(--pal-tertiary40);
+  --on-tertiary: var(--pal-tertiary100);
+  --tertiary-container: var(--pal-tertiary90);
+  --on-tertiary-container: var(--pal-tertiary10);
+  --error: var(--pal-error40);
+  --error-container: var(--pal-error90);
+  --on-error: var(--pal-primary100);
+  --on-error-container: var(--pal-error10);
+  --background: var(--pal-neutral99);
+  --on-background: var(--pal-neutral10);
+  --surface: var(--pal-neutral95);
+  --on-surface: var(--pal-neutral10);
+  --surface-variant: var(--pal-neutral-variant90);
+  --on-surface-variant: var(--pal-neutral-variant30);
+  --outline: var(--pal-neutral-variant50);
+  --inverse-on-surface: var(--pal-neutral95);
+  --inverse-surface: var(--pal-neutral20);
+  --inverse-primary: var(--pal-primary80);
+  --shadow: var(--pal-neutral0);
+  --surface-tint: var(--pal-primary40);
+  --outline-variant: var(--pal-neutral-variant80);
+  --scrim: var(--pal-neutral0); */
+  /* dark */
+  /* --primary-dark: var(--pal-primary80);
+  --on-primary-dark: var(--pal-primary20);
+  --primary-container-dark: var(--pal-primary30);
+  --on-primary-container-dark: var(--pal-primary90);
+  --secondary-dark: var(--pal-secondary80);
+  --on-secondary-dark: var(--pal-secondary20);
+  --secondary-container-dark: var(--pal-secondary30);
+  --on-secondary-container-dark: var(--pal-secondary90);
+  --tertiary-dark: var(--pal-tertiary80);
+  --on-tertiary-dark: var(--pal-tertiary20);
+  --tertiary-container-dark: var(--pal-tertiary30);
+  --on-tertiary-container-dark: var(--pal-tertiary90);
+  --error-dark: var(--pal-error80);
+  --error-container-dark: var(--pal-error30);
+  --on-error-dark: var(--pal-error20);
+  --on-error-container-dark: var(--pal-error90);
+  --background-dark: var(--pal-neutral0);
+  --on-background-dark: var(--pal-neutral90);
+  --surface-dark: var(--pal-neutral10);
+  --on-surface-dark: var(--pal-neutral90);
+  --surface-variant-dark: var(--pal-neutral-variant30);
+  --on-surface-variant-dark: var(--pal-neutral-variant80);
+  --outline-dark: var(--pal-neutral-variant60);
+  --inverse-on-surface-dark: var(--pal-neutral10);
+  --inverse-surface-dark: var(--pal-neutral90);
+  --inverse-primary-dark: var(--pal-primary40);
+  --shadow-dark: var(--pal-neutral0);
+  --surface-tint-dark: var(--pal-primary80);
+  --outline-variant-dark: var(--pal-neutral-variant30);
+  --scrim-dark: var(--pal-neutral0); */
+  /* Custom Colors */
+  --md-custom-color-Custom-Color-1: #008471;
+  --dp0: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --dp1: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  --dp2: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  --dp3: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+    0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+  --dp4: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  --dp5: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+  --dp6: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  --dp7: 0px 4px 5px -2px rgba(0, 0, 0, 0.2),
+    0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+  --dp8: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  --dp9: 0px 5px 6px -3px rgba(0, 0, 0, 0.2),
+    0px 9px 12px 1px rgba(0, 0, 0, 0.14), 0px 3px 16px 2px rgba(0, 0, 0, 0.12);
+  --dp10: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),
+    0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+  --dp11: 0px 6px 7px -4px rgba(0, 0, 0, 0.2),
+    0px 11px 15px 1px rgba(0, 0, 0, 0.14), 0px 4px 20px 3px rgba(0, 0, 0, 0.12);
+  --dp12: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),
+    0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+  --dp13: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),
+    0px 13px 19px 2px rgba(0, 0, 0, 0.14), 0px 5px 24px 4px rgba(0, 0, 0, 0.12);
+  --dp14: 0px 7px 9px -4px rgba(0, 0, 0, 0.2),
+    0px 14px 21px 2px rgba(0, 0, 0, 0.14), 0px 5px 26px 4px rgba(0, 0, 0, 0.12);
+  --dp15: 0px 8px 9px -5px rgba(0, 0, 0, 0.2),
+    0px 15px 22px 2px rgba(0, 0, 0, 0.14), 0px 6px 28px 5px rgba(0, 0, 0, 0.12);
+  --dp16: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),
+    0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+  --dp17: 0px 8px 11px -5px rgba(0, 0, 0, 0.2),
+    0px 17px 26px 2px rgba(0, 0, 0, 0.14), 0px 6px 32px 5px rgba(0, 0, 0, 0.12);
+  --dp18: 0px 9px 11px -5px rgba(0, 0, 0, 0.2),
+    0px 18px 28px 2px rgba(0, 0, 0, 0.14), 0px 7px 34px 6px rgba(0, 0, 0, 0.12);
+  --dp19: 0px 9px 12px -6px rgba(0, 0, 0, 0.2),
+    0px 19px 29px 2px rgba(0, 0, 0, 0.14), 0px 7px 36px 6px rgba(0, 0, 0, 0.12);
+  --dp20: 0px 10px 13px -6px rgba(0, 0, 0, 0.2),
+    0px 20px 31px 3px rgba(0, 0, 0, 0.14), 0px 8px 38px 7px rgba(0, 0, 0, 0.12);
+  --dp21: 0px 10px 13px -6px rgba(0, 0, 0, 0.2),
+    0px 21px 33px 3px rgba(0, 0, 0, 0.14), 0px 8px 40px 7px rgba(0, 0, 0, 0.12);
+  --dp22: 0px 10px 14px -6px rgba(0, 0, 0, 0.2),
+    0px 22px 35px 3px rgba(0, 0, 0, 0.14), 0px 8px 42px 7px rgba(0, 0, 0, 0.12);
+  --dp23: 0px 11px 14px -7px rgba(0, 0, 0, 0.2),
+    0px 23px 36px 3px rgba(0, 0, 0, 0.14), 0px 9px 44px 8px rgba(0, 0, 0, 0.12);
+  --dp24: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
+    0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+  --minFontSize: 16px;
+  --maxFontSize: 22px;
+  --scaler: 6vw;
+}
+
+/*# sourceMappingURL=darkTokens.css.map */
