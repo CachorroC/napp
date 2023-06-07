@@ -5,23 +5,21 @@ import { usePathname } from 'next/navigation';
 import { ReactNode } from 'react';
 import card from '#@/components/card/card.module.scss';
 import layout from '#@/styles/css/layout.module.css';
-export const Card = (
-  {
-    name,
-    path,
-    children,
-    llaveProceso,
-    idProceso,
-    icon,
-  }: {
+export const Card = ({
+  name,
+  path,
+  children,
+  llaveProceso,
+  idProceso,
+  icon,
+}: {
   name: string;
   path: string;
   children: ReactNode;
   llaveProceso?: string;
   idProceso?: number;
   icon?: string;
-}
-) => {
+}) => {
   const pathname = usePathname();
 
   const href = (
@@ -48,9 +46,7 @@ export const Card = (
         <div className={card.bottom}>
           <Link
             href={href}
-            className={isActive
-              ? card.linkIsActive
-              : card.link}
+            className={isActive ? card.linkIsActive : card.link}
           >
             <span className={`material-symbols-outlined ${card.icon}`}>
               {icon ?? 'star'}

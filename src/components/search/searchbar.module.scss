@@ -1,5 +1,5 @@
 .linkContainer {
-  container-type: size;
+  container-type: inline-size;
   container-name: link;
 }
 .button {
@@ -147,16 +147,14 @@
   }
 }
 @container link (max-width: 400px) {
-  .link,
-  .link:link,
-  .link:visited {
-    background-color: #00ff00;
+  .link {
+    padding: 1vmin;
   }
 }
 .input {
-  background-color: var(--surface);
+  background-color: var(--primary-container);
   border: none;
-  border-bottom: solid 1px var(--on-surface);
+  border-bottom: solid 1px var(--on-primary-container);
   color: var(--on-surface);
   grid-area: InputSearchBar;
   flex-grow: 1;

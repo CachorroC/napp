@@ -32,6 +32,8 @@
   --surface-tint: var(--pal-primary40);
   --outline-variant: var(--pal-neutral-variant80);
   --scrim: var(--pal-neutral0);
+  --nav-background: var(--pal-primary30);
+  --on-nav-background: var(--pal-neutral90);
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -65,6 +67,8 @@
     --surface-tint: var(--pal-primary80);
     --outline-variant: var(--pal-neutral-variant30);
     --scrim: var(--pal-neutral0);
+    --nav-background: var(--pal-neutral90);
+    --on-nav-background: var(--pal-primary30);
   }
 }
 * {
@@ -149,13 +153,13 @@ h6 {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--tertiary-container);
+  background: var(--tertiary);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--tertiary);
+  background: var(--on-tertiary);
 }
 
 * {

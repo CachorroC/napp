@@ -13,46 +13,27 @@ export async function GET(
     }
   );
   if (!req.ok) {
-    return new NextResponse(
-      JSON.stringify(
-        req
-      ),
-      {
-        status: 200,
-        headers: {
-          'content-type': 'application/json',
-        },
-      }
-    );
-  }
-  const res = (await req.json()) as intConsultaActuaciones;
-  console.log(
-    JSON.stringify(
-      res
-    )
-  );
-  if (res.actuaciones.length === 0) {
-    return new Response(
-      JSON.stringify(
-        res
-      ),
-      {
-        status: 200,
-        headers: {
-          'content-type': 'application/json',
-        },
-      }
-    );
-  }
-  return new Response(
-    JSON.stringify(
-      res.actuaciones
-    ),
-    {
+    return new NextResponse(JSON.stringify(req), {
       status: 200,
       headers: {
         'content-type': 'application/json',
       },
-    }
-  );
+    });
+  }
+  const res = (await req.json()) as intConsultaActuaciones;
+  console.log(JSON.stringify(res));
+  if (res.actuaciones.length === 0) {
+    return new Response(JSON.stringify(res), {
+      status: 200,
+      headers: {
+        'content-type': 'application/json',
+      },
+    });
+  }
+  return new Response(JSON.stringify(res.actuaciones), {
+    status: 200,
+    headers: {
+      'content-type': 'application/json',
+    },
+  });
 }

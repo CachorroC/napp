@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import navbar from '#@/components/navbar/navbar.module.scss';
 
 export default function FBButtons() {
-  const [ isShowing, setIsShowing ] = useNoter();
+  const [isShowing, setIsShowing] = useNoter();
   const router = useRouter();
   return (
     <>
@@ -20,9 +20,7 @@ export default function FBButtons() {
         type='button'
         className={navbar.button}
         onClick={() => {
-          setIsShowing(
-            !isShowing
-          );
+          setIsShowing(!isShowing);
         }}
       >
         <span className='material-symbols-outlined'>note</span>

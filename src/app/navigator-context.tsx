@@ -12,33 +12,23 @@ import { SetStateAction } from 'react';
 
 const NavContext = createContext<
   [boolean, Dispatch<SetStateAction<boolean>>] | undefined
->(
-  undefined
-);
+>(undefined);
 
-export function NavProvider(
-  { children }: { children: ReactNode }
-) {
-  const [ isOpen, setIsOpen ] = useState(
-    false
-  );
+export function NavProvider({ children }: { children: ReactNode }) {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <NavContext.Provider value={[ isOpen, setIsOpen ]}>
+    <NavContext.Provider value={[isOpen, setIsOpen]}>
       {children}
     </NavContext.Provider>
   );
 }
 
 export function useNavigator() {
-  const context = useContext(
-    NavContext
-  );
+  const context = useContext(NavContext);
 
   if (context === undefined) {
-    throw new Error(
-      'useNavigator must be used within a NavProvider'
-    );
+    throw new Error('useNavigator must be used within a NavProvider');
   }
 
   return context;

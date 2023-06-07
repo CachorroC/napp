@@ -5,27 +5,19 @@ import { monDemandado } from './types/mongodb';
 
 const rows: unknown[] = [];
 
-export const getProcesos = cache(
-  async () => {
-    const req = await fetch(
-      `${getBaseUrl()}/api/Procesos`
+export const getProcesos = cache(async () => {
+  const req = await fetch(`${getBaseUrl()}/api/Procesos`);
+  if (!req.ok) {
+    throw new Error(
+      'no pudimos comunicarnos con /api/procesos, este error proviene de getProcesos'
     );
-    if (!req.ok) {
-      throw new Error(
-        'no pudimos comunicarnos con /api/procesos, este error proviene de getProcesos'
-      );
-    }
-    const res = (await req.json()) as monDemandado[];
-    return res;
   }
-);
+  const res = (await req.json()) as monDemandado[];
+  return res;
+});
 export const getProcesosByllaveProceso = cache(
-  async (
-    { llaveProceso }: { llaveProceso: string }
-  ) => {
-    const req = await fetch(
-      `${getBaseUrl()}/api/Procesos/${llaveProceso}`
-    );
+  async ({ llaveProceso }: { llaveProceso: string }) => {
+    const req = await fetch(`${getBaseUrl()}/api/Procesos/${llaveProceso}`);
 
     const res = (await req.json()) as monDemandado[];
 
@@ -34,9 +26,7 @@ export const getProcesosByllaveProceso = cache(
 );
 
 export const getProcesoByidProceso = cache(
-  async (
-    { idProceso }: { idProceso: number }
-  ) => {
+  async ({ idProceso }: { idProceso: number }) => {
     const res = await fetch(
       `${getBaseUrl()}/api/Procesos?idProceso=${idProceso}`
     );

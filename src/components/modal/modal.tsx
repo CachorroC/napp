@@ -5,7 +5,7 @@ import React from 'react';
 import { useModal } from '#@/app/modal-context';
 import modal from '#@/components/modal/modal.module.scss';
 
-export default function Modal(
+export default function Modal (
   { children }: { children: ReactNode }
 ) {
   const [ isShowing, setIsShowing ] = useModal();
@@ -22,7 +22,7 @@ export default function Modal(
     (
       event: { key: string }
     ) => {
-      if (event.key === 'Escape') {
+      if ( event.key === 'Escape' ) {
         onDismiss();
       }
     },
@@ -44,31 +44,32 @@ export default function Modal(
     },
     [ onKeyDown ]
   );
-  if (!isShowing) {
+  if ( !isShowing ) {
     return (
-      <div className={modal.modal}>
+      <div className={ modal.modal }>
         <button
-          onClick={() => {
+          onClick={ () => {
             setIsShowing(
               true
             );
-          }}
+          } }
         >
           <span className='material-symbols-outline'>cancel</span>
         </button>
-        {children}
+        { children }
       </div>
     );
   }
   return (
     <button
-      onClick={() => {
+      onClick={ () => {
+        router.back();
         setIsShowing(
           false
         );
-      }}
+      } }
     >
-      <span className='material-symbols-outline'>{'cancel'}</span>
+      <span className='material-symbols-outline'>{ 'cancel' }</span>
     </button>
   );
 }

@@ -20,11 +20,11 @@ export const LinkCard = (
     llaveProceso,
     idProceso,
   }: {
-  path: string;
-  sujetosProcesales: string;
-  llaveProceso?: string;
-  idProceso?: number;
-}
+    path: string;
+    sujetosProcesales: string;
+    llaveProceso: string;
+    idProceso?: number;
+  }
 ) => {
   const params = useParams();
   const pathname = usePathname();
@@ -33,31 +33,31 @@ export const LinkCard = (
   const href = (
     llaveProceso
       ? idProceso
-        ? `${path}/${llaveProceso}/${idProceso}/Actuaciones`
-        : `${path}/${llaveProceso}`
+        ? `${ path }/${ llaveProceso }/${ idProceso }/Actuaciones`
+        : `${ path }/${ llaveProceso }`
       : path
   ) as Route;
   const isActive =
     pathname === href ||
-    pathname === `${path}/${llaveProceso}/${idProceso}/Actuaciones` ||
-    pathname === `${path}/${llaveProceso}/${idProceso}` ||
-    pathname === `${path}/${llaveProceso}` ||
+    pathname === `${ path }/${ llaveProceso }/${ idProceso }/Actuaciones` ||
+    pathname === `${ path }/${ llaveProceso }/${ idProceso }` ||
+    pathname === `${ path }/${ llaveProceso }` ||
     pathname === path;
   const mismoDemandado =
     params.llaveProceso === llaveProceso &&
     params.idProceso !== idProceso?.toString();
   return (
     <Link
-      key={idProceso}
-      onClick={() => {
-        setIsOpen(
-          false
-        );
-      }}
-      href={href}
-      className={searchbar.linkContainer}
+      key={ idProceso }
+      href={ href }
+      className={ searchbar.linkContainer }
     >
-      <div
+      <button
+        onClick={ () => {
+          setIsOpen(
+            false
+          );
+        } }
         style={
           mismoDemandado
             ? {
@@ -66,58 +66,58 @@ export const LinkCard = (
             }
             : {}
         }
-        className={isActive
+        className={ isActive
           ? searchbar.linkIsActive
-          : searchbar.link}
+          : searchbar.link }
       >
-        <h1 className={searchbar.text}>{sujetosProcesales}</h1>
-      </div>
+        <h1 className={ searchbar.text }>{ sujetosProcesales }</h1>
+      </button>
     </Link>
   );
 };
 
-export function Linker<T extends string>(
+export function Linker<T extends string> (
   {
     children,
     path,
     llaveProceso,
     idProceso,
   }: {
-  children: ReactNode;
-  path: string;
-  llaveProceso?: string;
-  idProceso?: number;
-}
+    children: ReactNode;
+    path: string;
+    llaveProceso?: string;
+    idProceso?: number;
+  }
 ) {
   const pathname = usePathname();
 
   const href = (
     llaveProceso
       ? idProceso
-        ? `${path}/${llaveProceso}/${idProceso}/Actuaciones`
-        : `${path}/${llaveProceso}`
+        ? `${ path }/${ llaveProceso }/${ idProceso }/Actuaciones`
+        : `${ path }/${ llaveProceso }`
       : path
   ) as Route;
   const isActive =
     pathname === href ||
-    pathname === `${path}/${llaveProceso}/${idProceso}/Actuaciones` ||
-    pathname === `${path}/${llaveProceso}/${idProceso}` ||
-    pathname === `${path}/${llaveProceso}` ||
+    pathname === `${ path }/${ llaveProceso }/${ idProceso }/Actuaciones` ||
+    pathname === `${ path }/${ llaveProceso }/${ idProceso }` ||
+    pathname === `${ path }/${ llaveProceso }` ||
     pathname === path;
   const [ isShowing, setIsShowing ] = useModal();
   return (
     <Link
-      href={href}
-      className={isActive
+      href={ href }
+      className={ isActive
         ? card.linkIsActive
-        : card.link}
-      onClick={() => {
+        : card.link }
+      onClick={ () => {
         setIsShowing(
           true
         );
-      }}
+      } }
     >
-      {children}
+      { children }
     </Link>
   );
 }

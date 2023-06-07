@@ -17,18 +17,17 @@
 .button {
   border: none;
   box-shadow: var(--dp5);
-
   border-radius: 1vmin;
   flex-grow: 1;
-  background-color: var(--sf-3);
+  background-color: var(--sf-2);
   & > span {
-    color: var(--primary);
+    color: var(--on-primary);
     font-size: 1.5rem;
     font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
   }
   &:hover,
   &:active {
-    background-color: var(--primary);
+    background-color: var(--sf-5);
     box-shadow: var(--dp8);
     & > span {
       font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 200, 'opsz' 48;

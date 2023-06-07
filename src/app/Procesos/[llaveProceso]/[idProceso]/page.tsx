@@ -5,16 +5,12 @@ import Modal from '#@/components/modal/modal';
 import layout from '#@/styles/css/layout.module.css';
 import { getProcesoByidProceso } from '#@/lib/getProcesos';
 
-export default async function Page(
-  {
-    params: { llaveProceso, idProceso },
-  }: {
+export default async function Page({
+  params: { llaveProceso, idProceso },
+}: {
   params: { llaveProceso: string; idProceso: number };
-}
-) {
-  const proceso = await getProcesoByidProceso(
-    { idProceso: idProceso }
-  );
+}) {
+  const proceso = await getProcesoByidProceso({ idProceso: idProceso });
   return (
     <div className={layout.main}>
       <Card

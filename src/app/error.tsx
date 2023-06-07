@@ -1,11 +1,27 @@
 'use client';
-import card from '#@/components/card/card.module.scss';
-export default function Error() {
+
+import React from 'react';
+
+export default function Error (
+  { error, reset }: any
+) {
+  React.useEffect(
+    () => {
+      console.log(
+        'logging error:',
+        error
+      );
+    },
+    [ error ]
+  );
+
   return (
-    <div className={card.error}>
-      <div className={card.layout}>
-        <div className={card.top}>
-          <h1 className={card.title}>Error</h1>
+    <div className={ box.container }>
+      <div className="space-y-4">
+        <h2 className="text-lg font-bold">Error</h2>
+        <p className="text-sm">{ error?.message }</p>
+        <div>
+          <Button onClick={ () => reset() }>Try Again</Button>
         </div>
       </div>
     </div>

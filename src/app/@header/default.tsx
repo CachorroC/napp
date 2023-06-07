@@ -11,27 +11,16 @@ import { getProcesos } from '#@/lib/getProcesos';
 import SearchOutputList from '#@/components/search/SearchProcesosOutput';
 import SearchOutputListSkeleton from '#@/components/search/SearchProcesosOutputSkeleton';
 import navbar from '#@/components/navbar/navbar.module.scss';
+import FBButtons from '#@/components/navbar/forwardBackButtons';
 
-export default async function Default() {
-  const procesos = await getProcesos();
+export default async function Default () {
   return (
-    <div className={layout.header}>
-      <Link className={navbar.button} href='/'>
+    <div className={ layout.header }>
+      <Link className={ navbar.button } href='/'>
         Home
       </Link>
-      <Link className={navbar.button} href='/'>
-        About
-      </Link>
-      <Link className={navbar.button} href='/'>
-        Contact
-      </Link>
+      <FBButtons />
       <InputSearchBar />
-      <Drawer>
-        <InputSearchBar />
-        <Suspense fallback={<SearchOutputListSkeleton />}>
-          <SearchOutputList path={'/Procesos'} procesos={procesos} />
-        </Suspense>
-      </Drawer>
-    </div>
+    </div >
   );
 }

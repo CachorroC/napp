@@ -32,6 +32,8 @@
   --surface-tint: var(--pal-primary40);
   --outline-variant: var(--pal-neutral-variant80);
   --scrim: var(--pal-neutral0);
+  --nav-background: var(--pal-primary30);
+  --on-nav-background: var(--pal-neutral90);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -66,6 +68,8 @@
     --surface-tint: var(--pal-primary80);
     --outline-variant: var(--pal-neutral-variant30);
     --scrim: var(--pal-neutral0);
+    --nav-background: var(--pal-neutral90);
+    --on-nav-background: var(--pal-primary30);
   }
 }
 * {
@@ -87,7 +91,7 @@ html {
 }
 
 .material-symbols-outlined {
-  font-family: 'Material Symbols Outlined';
+  font-family: "Material Symbols Outlined";
   font-weight: normal;
   font-style: normal;
   font-size: 1.5rem; /* Preferred icon size */
@@ -155,13 +159,13 @@ h6 {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--tertiary-container);
+  background: var(--tertiary);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--tertiary);
+  background: var(--on-tertiary);
 }
 
 * {
@@ -169,7 +173,7 @@ h6 {
 }
 
 /* Style inputs, select elements and textareas */
-input[type='text'],
+input[type=text],
 select,
 textarea {
   padding: 1vmin;
@@ -186,7 +190,7 @@ label {
 }
 
 /* Style the submit button */
-input[type='submit'] {
+input[type=submit] {
   background-color: var(--sf-4);
   color: var(--on-surface);
   padding: 12px 20px;

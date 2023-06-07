@@ -1,27 +1,24 @@
 'use client';
 import { useSearch } from '#@/app/search-context';
-import { Suspense, ReactNode } from 'react';
-import { LinkCard } from './link';
-import CardSkeleton from '../card/card-skeleton';
-import { Card } from '../card/card';
-import { Fecha } from '../card/fecha';
+import { Suspense, ReactNode, ReactElement } from 'react';
 import { monDemandado } from '#@/lib/types/mongodb';
+import CardSkeleton from '#@/components/card/card-skeleton';
+import { Card } from '#@/components/card/card';
+import { LinkCard } from './link';
 
 export default function SearchOutputList (
   {
     path,
     procesos,
-    children
   }: {
     path: string;
     procesos: monDemandado[];
-    children: ReactNode;
   }
 ) {
   const [ search ] = useSearch();
   const rows: any[] = [];
   procesos.forEach(
-    (
+    async (
       proceso, index, array
     ) => {
       if (
@@ -34,15 +31,12 @@ export default function SearchOutputList (
       }
       rows.push(
         <Suspense fallback={ <CardSkeleton /> }>
-          <Card
-            name={ proceso.sujetosProcesales }
+          <LinkCard
+            path={ path }
+            sujetosProcesales={ proceso.sujetosProcesales }
             idProceso={ proceso.idProceso }
             llaveProceso={ proceso.llaveProceso }
-            path={ '/Procesos' }
-            key={ proceso.idProceso }
-          >
-            { children }
-          </Card>
+          />
         </Suspense>
       );
     }
@@ -50,7 +44,12 @@ export default function SearchOutputList (
 
   return (
     <>
-      <LinkCard path={ '/Procesos' } sujetosProcesales={ 'Demandados' } key={ 0 } />
+      <LinkCard
+        path={ path }
+        sujetosProcesales={ 'Demandados' }
+        key={ 0 }
+        llaveProceso={ '0' }
+      />
       { rows }
     </>
   );
